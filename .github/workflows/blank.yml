@@ -1,0 +1,21 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+    container: ubuntu:20.04
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a multi-line script
+      run: |
+        # this should be in container
+        apt-get -y update && apt-get install -y libboost-all-dev build-essential cmake
+        echo build your project.
+        git submodule update --init --recursive
+        tools/init.sh
+        source ./sources/poky-sumo/oe-init-build-env ./build
+        bitbake console-image
