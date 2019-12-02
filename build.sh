@@ -4,5 +4,4 @@ tools/init.sh
 source ./sources/poky-sumo/oe-init-build-env ./build
 pwd
 which bitbake
-bitbake console-image
-
+bitbake console-image -DDD -v
