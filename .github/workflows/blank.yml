@@ -13,7 +13,7 @@ jobs:
     - name: Run a multi-line script
       run: |
         # this should be in container
-        apt-get -y update && apt-get install -y build-essential cmake git python2 locales chrpath texinfo
+        apt-get -y update && apt-get install -y build-essential cmake git python locales chrpath texinfo
         locale
         locale-gen "en_US.UTF-8"
         update-locale LC_ALL="en_US.UTF-8"
