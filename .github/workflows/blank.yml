@@ -15,7 +15,4 @@ jobs:
         # this should be in container
         apt-get -y update && apt-get install -y libboost-all-dev build-essential cmake git python3
         echo build your project.
-        git submodule update --init --recursive
-        tools/init.sh
-        . ./sources/poky-sumo/oe-init-build-env ./build
-        bitbake console-image
+        ./build.sh
