@@ -13,7 +13,7 @@ jobs:
     - name: Run a multi-line script
       run: |
         # this should be in container
-        apt-get -y update && apt-get install -y libboost-all-dev build-essential cmake git python3 locales
+        apt-get -y update && apt-get install -y build-essential cmake git python3 locales chrpath texinfo makeinfo
         locale
         locale-gen "en_US.UTF-8"
         update-locale LC_ALL="en_US.UTF-8"
